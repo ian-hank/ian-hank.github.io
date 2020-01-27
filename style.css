@@ -1,0 +1,12 @@
+body {
+  background-image: url("img/bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.header h2 {
+  text-align: center;
+  margin-top: 300px;
+}
