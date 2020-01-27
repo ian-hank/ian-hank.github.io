@@ -1,3 +1,7 @@
+ul li {
+  text-decoration: none;
+}
+
 body {
   background-image: url("img/bg.jpg");
   background-position: center center;
@@ -8,5 +12,6 @@ body {
 
 .header h2 {
   text-align: center;
-  margin-top: 300px;
+  text-shadow: 2px 2px 8px #FFF;
+  margin-top: 180px;
 }
