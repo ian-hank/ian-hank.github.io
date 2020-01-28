@@ -74,24 +74,59 @@ main {
 	padding-top: 81px;
 }
 
-.header h2 {
-  font-size: 126px;
-  color: #656565;
-  text-align: center;
-  text-shadow: 2px 2px 8px #FFF;
-  margin-top: 120px;
-  font-family: 'Righteous', cursive;
+/* HEADER STYLING */
+header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1000;
+	background-color: #fff;
+	width: 100%;
+	height: 80px;
+	background: rgba(255,255,255,0.9);
 }
+ header .header-brand {
+ 	font-family: 'Catamaran', sans-serif;
+ 	color: #111;
+ 	font-size: 24px;
+ 	text-transform: uppercase;
+ 	font-weight: 900;
+ 	display: block;
+ 	margin: 0 auto;
+ 	text-align: center;
+ 	padding: 20px 0;
 
-.body-main {
-  margin: 25px 25px 280px 280px;
+ }
+
+ header nav ul {
+ 	margin: 0 auto;
+ 	display: block;
+ 	width: fit-content;
+ }
+
+ header nav ul li{
+ 	display: inline-block;
+ 	float: left;
+ 	list-style: none;
+ 	padding: 0 10px;
+ }
+
+ header nav ul li a{
+ 	color: #111;
+ 	font-size: 14px;
+ 	font-weight: 800;
+ 	text-transform: uppercase;
+ }
+
+nav ul li.parent ul.child {
+  display: none;
 }
-
-.body-main p {
-  text-align: center;
-  text-shadow: 2px 2px 8px #FFF;
-  font-family: 'Righteous', cursive;
-
+nav ul li.parent:hover ul.child {
+  display: block;
+  position: absolute;
+  top: 30px;
+  background: #fff;
 }
 
 nav ul li.parent ul.child li {
