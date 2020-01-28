@@ -301,3 +301,198 @@ nav ul li.parent ul.child li a {
  	  width: 540px;
  	  margin: 0 auto;
   }
+
+/* PROJECTS STYLING */
+
+  .heading {
+  	text-transform: uppercase;
+  	text-size: 3.5rem;
+  	letter-spacing: 3px;
+  	margin-right: -3px;
+  	margin-bottom: 5rem;
+  	text-align: center;
+  	color: #333;
+  	position: relative;
+  	margin-top: 100px;
+  	font-family: Catamaran;
+  	font-size: 20px;
+  }
+
+  .heading::after {
+  	content: "";
+  	width: 12rem;
+  	height: .65rem;
+  	background-color: #333;
+  	position: absolute;
+  	bottom: -2rem;
+  	left: 50%;
+  	transform: translateX(-50%);
+  	border-radius: 2rem;
+  }
+
+  .card-wrapper {
+  	display: flex;
+  	align-items: center;
+  	align-content: center;
+  	flex-direction: column;
+  }
+
+  .card {
+  	width: 24rem;
+  	background-color: #ECCD4E;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	margin: 2rem 0;
+  	box-shadow: .5rem .5rem 3rem rgba(0,0,0,0.2);
+  	border-radius: 4%;
+
+  }
+
+  .card .card-img {
+  	width: 100%;
+  	height: 26rem;
+  	object-fit: cover;
+  	-webkit-clip-path: polygon(0 0, 100% 0, 100% 38%, 0 61%);
+  clip-path: polygon(0 0, 100% 0, 100% 38%, 0 61%);
+  	border-radius: 4%;
+  }
+
+  .project-img {
+  	width: 12rem;
+  	height: 12rem;
+  	object-fit: cover;
+  	border-radius: 50%;
+  	margin-top: -21rem;
+  	z-index: 999;
+  	border: 8px solid #ECCD4E;
+  }
+
+  .card h1 {
+  	font-size: 24px;
+  	font-family: Catamaran;
+  	color: #333;
+  	font-weight: bold;
+  }
+
+  .date-complete {
+  	color: #777;
+  	font-size: 18px;
+  	font-weight: 400;
+  	font-style: italic;
+  }
+
+  .about {
+  	font-size: 17px;
+  	margin: 10px 30px;
+  	font-style: Catamaran;
+  	text-align: center;
+  	color: #333;
+  }
+
+  .card .btn {
+  	padding: 1rem 2.5rem;
+  	background-color: #333;
+  	border-radius: 2rem;
+  	margin: 10 0;
+  	text-transform: uppercase;
+  	color: #eee;
+  	font-size: 1rem;
+  	transition: all .5s;
+  }
+
+  .card .btn:hover{
+  	transform: translateY(-2px);
+  	box-shadow: .5rem .5rem 2rem rgba(0,0,0.2)
+  }
+
+  card .btn:active{
+  	transform: translateY(-2px);
+  	box-shadow: none;
+  }
+
+  .social-media {
+  	width: 100%;
+  	list-style: none;
+  	display: flex;
+  	justify-content: center;
+  	margin: 10px 10px;
+  }
+
+  .social-media i {
+  	font-size: 10rem;
+  }
+
+  .fa-file-text-o {
+  	color: #333;
+  	margin-left: 25px;
+  	margin-top: 2px;
+  }
+
+  .fa-file-text-o:hover {
+  	transform: scale(1.5);
+  }
+
+  .fa-linkedin-square {
+  	color: #333;
+  }
+
+  .fa-linkedin-square:hover {
+  	transform: scale(1.5);
+  }
+
+  @media only screen and (min-width: 1000px) {
+  	.card-wrapper {
+  		flex-direction: row;
+  		flex-wrap: wrap;
+  		justify-content: center;
+  		align-items: center;
+  	}
+  	.card {
+  		margin: 1.5rem;
+  	}
+
+  	@keyframes fadeIn {
+  		from {
+  			opacity: 0;
+  		}
+  		to {
+  			opacity: 1;
+  		}
+  	}
+  	.card:nth-child(1) {
+  		animation: fadeIn .5s .5s backwards;
+  	}
+
+  	.card:nth-child(2) {
+  		animation: fadeIn .5s 1s backwards;
+  	}
+
+  	.card:nth-child(3) {
+  		animation: fadeIn .5s 1.5s backwards;
+  	}
+
+  	.card:nth-child(4) {
+  		animation: fadeIn .5s 2s backwards;
+  	}
+
+  	.card:nth-child(5) {
+  		animation: fadeIn .5s 2.5s backwards;
+  	}
+
+  	.card:nth-child(6) {
+  		animation: fadeIn .5s 3s backwards;
+  	}
+
+  	.card:hover {
+  		transform: scale(1.1);
+  	}
+
+  }
+
+  .general-ideas-name {
+  	margin-top: 20px;
+  	margin-bottom: 20px;
+  	color: #fff !important;
+  }
