@@ -11,7 +11,21 @@ body {
 }
 
 .header h2 {
+  font-size: 126px;
+  color: #656565;
   text-align: center;
   text-shadow: 2px 2px 8px #FFF;
-  margin-top: 180px;
+  margin-top: 120px;
+  font-family: 'Righteous', cursive;
+}
+
+.body-main {
+  margin: 25px 25px 280px 280px;
+}
+
+.body-main p {
+  text-align: center;
+  text-shadow: 2px 2px 8px #FFF;
+  font-family: 'Righteous', cursive;
+
 }
