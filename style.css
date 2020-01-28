@@ -301,6 +301,7 @@ nav ul li.parent ul.child li a {
  	  width: 540px;
  	  margin: 0 auto;
   }
+}
 
 /* PROJECTS STYLING */
 
@@ -363,10 +364,16 @@ nav ul li.parent ul.child li a {
   	width: 12rem;
   	height: 12rem;
   	object-fit: cover;
-  	border-radius: 50%;
+  	border-radius: 110%;
   	margin-top: -21rem;
   	z-index: 999;
   	border: 8px solid #ECCD4E;
+  }
+
+	.general-ideas-name {
+  	margin-top: 20px;
+  	margin-bottom: 20px;
+  	color: #fff !important;
   }
 
   .card h1 {
@@ -412,37 +419,7 @@ nav ul li.parent ul.child li a {
   	box-shadow: none;
   }
 
-  .social-media {
-  	width: 100%;
-  	list-style: none;
-  	display: flex;
-  	justify-content: center;
-  	margin: 10px 10px;
-  }
-
-  .social-media i {
-  	font-size: 10rem;
-  }
-
-  .fa-file-text-o {
-  	color: #333;
-  	margin-left: 25px;
-  	margin-top: 2px;
-  }
-
-  .fa-file-text-o:hover {
-  	transform: scale(1.5);
-  }
-
-  .fa-linkedin-square {
-  	color: #333;
-  }
-
-  .fa-linkedin-square:hover {
-  	transform: scale(1.5);
-  }
-
-  @media only screen and (min-width: 1000px) {
+  @media screen and (min-width: 1000px) {
   	.card-wrapper {
   		flex-direction: row;
   		flex-wrap: wrap;
@@ -489,10 +466,4 @@ nav ul li.parent ul.child li a {
   		transform: scale(1.1);
   	}
 
-  }
-
-  .general-ideas-name {
-  	margin-top: 20px;
-  	margin-bottom: 20px;
-  	color: #fff !important;
   }
