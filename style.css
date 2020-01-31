@@ -1,12 +1,12 @@
-/* CSS RESET CREDIT BELOW
-ian-hank's CSS BEGINS ON LINE 60
-*/
+/* TABLE OF CONTENTS
+needs done */
 
-/* http://meyerweb.com/eric/tools/css/reset/
+
+/* WEBPAGE RESET
+	 http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -27,37 +27,42 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
 
+/*========================
+	Authors CSS Begins Here
 
-
-
-
-
-/* OVERALL SETTERS */
+		 Hard Coded Tags
+========================*/
 * {
 	text-decoration: none;
 }
@@ -74,19 +79,22 @@ main {
 	padding-top: 81px;
 }
 
-/* HEADER STYLING */
+/*==============
+HEADER STYLING
+==============*/
 header {
 	position: fixed;
 	top: 0;
 	right: 0;
 	left: 0;
-	z-index: 1000;
+	z-index: 1000; /*Need to check all Z-values and get them to a realistic scale*/
 	background-color: #fff;
 	width: 100%;
-	height: 83px;
+	height: 82px;
 	background: rgba(255,255,255,0.9);
 }
- header .header-brand {
+
+header .header-brand {
  	font-family: 'Catamaran', sans-serif;
  	color: #111;
  	font-size: 24px;
@@ -96,128 +104,96 @@ header {
  	margin: 0 auto;
  	text-align: center;
  	padding: 20px 0;
+}
 
- }
-
- header nav ul {
+header nav ul {
  	margin: 0 auto;
  	display: block;
  	width: fit-content;
- }
+}
 
- header nav ul li{
+header nav ul li{
  	display: inline-block;
  	float: left;
  	list-style: none;
  	padding: 0 10px;
- }
+}
 
- header nav ul li a{
+header nav ul li a{
  	color: #111;
  	font-size: 14px;
  	font-weight: 800;
  	text-transform: uppercase;
- }
-
-nav ul li.parent ul.child {
-  display: none;
-}
-nav ul li.parent:hover ul.child {
-  display: block;
-  position: absolute;
-  top: 30px;
-  background: #fff;
 }
 
-nav ul li.parent ul.child li {
-  width: 10rem;
-  padding: 0;
-}
-nav ul li.parent ul.child li:hover {
-  background: #fff;
-}
-nav ul li.parent ul.child li a {
-  display: block;
-}
-
-.dropdown:hover .dropdown {
-  display: block;
-  position: absolute;
-  top: 40px;
-  background: #fff;
-}
-
-/* SCALING FOR MOBILE DEVICES */
+/* SCALING FOR SMALL DEVICES */
 @media only screen and (min-width: 1000px) {
-	header {
-
-	}
-
 	header .header-brand {
- 	margin: 19px 0px;
- 	text-align: left;
- 	padding: 0px 20px 0px 40px;
- 	border-right: 3px solid #111;
- 	float: left;
- 	line-height: 38px;
- 	font-size: 20px;
+ 		margin: 19px 0px;
+ 		text-align: left;
+ 		padding: 0px 20px 0px 40px;
+ 		border-right: 3px solid #111;
+ 		float: left;
+ 		line-height: 38px;
+ 		font-size: 20px;
   }
 
- header nav ul {
- 	margin: 20px 0px 0px 20px;
- 	float: left;
+  header nav ul {
+ 		margin: 20px 0px 0px 20px;
+ 		float: left;
   }
 
- header nav ul li{
- 	display: inline-block;
- 	float: left;
- 	list-style: none;
- 	padding: 0 10px;
+  header nav ul li {
+ 		display: inline-block;
+ 		float: left;
+ 		list-style: none;
+ 		padding: 0 10px;
   }
 
- header nav ul li a{
- 	font-size: 14px;
- 	line-height: 34px;
+  header nav ul li a {
+ 		font-size: 14px;
+ 		line-height: 34px;
   }
 
- .cl-effect-1 a::before,
- .cl-effect-1 a::after {
- 	display: inline-block;
- 	opacity: 0;
- 	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
- 	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
- 	transition: transform 0.3s, opacity 0.2s;
+  .cl-effect-1 a::before,
+  .cl-effect-1 a::after {
+ 		display: inline-block;
+ 		opacity: 0;
+ 		-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+ 		-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+ 		transition: transform 0.3s, opacity 0.2s;
   }
 
- .cl-effect-1 a::before {
- 	margin-right: 10px;
- 	content: '[';
- 	-webkit-transform: translateX(20px);
- 	-moz-transform: translateX(20px);
- 	transform: translateX(20px);
+  .cl-effect-1 a::before {
+ 		margin-right: 10px;
+ 		content: '[';
+ 		-webkit-transform: translateX(20px);
+ 		-moz-transform: translateX(20px);
+ 		transform: translateX(20px);
   }
 
- .cl-effect-1 a::after {
- 	margin-left: 10px;
- 	content: ']';
- 	-webkit-transform: translateX(-20px);
- 	-moz-transform: translateX(-20px);
- 	transform: translateX(-20px);
+  .cl-effect-1 a::after {
+ 		margin-left: 10px;
+ 		content: ']';
+ 		-webkit-transform: translateX(-20px);
+ 		-moz-transform: translateX(-20px);
+ 		transform: translateX(-20px);
   }
 
- .cl-effect-1 a:hover::before,
- .cl-effect-1 a:hover::after,
- .cl-effect-1 a:focus::before,
-
- .cl-effect-1 a:focus::after {
- 	opacity: 1;
- 	-webkit-transform: translateX(0px);
- 	-moz-transform: translateX(0px);
- 	transform: translateX(0px);
+  .cl-effect-1 a:hover::before,
+  .cl-effect-1 a:hover::after,
+  .cl-effect-1 a:focus::before,
+  .cl-effect-1 a:focus::after {
+ 		opacity: 1;
+ 		-webkit-transform: translateX(0px);
+ 		-moz-transform: translateX(0px);
+ 		transform: translateX(0px);
   }
 }
 
-/* HOME MAIN STYLING */
+/*======================
+Home Page / Main banner
+======================*/
 .index-banner{
  	width: 100%;
  	height: calc(100vh - 100px);
@@ -226,14 +202,15 @@ nav ul li.parent ul.child li a {
  	background-position: center;
  	background-size: cover;
  	display: table;
- }
+}
 
- .vertical-center {
+.vertical-center {
  	display: table-cell;
  	vertical-align: middle;
- }
+	padding: 25px;
+}
 
- .index-banner h2 {
+.index-banner h2 {
  	text-transform: uppercase;
  	font-weight: bold;
  	font-family: 'Catamaran', sans-serif;
@@ -243,10 +220,9 @@ nav ul li.parent ul.child li a {
  	text-shadow: 2px 2px 8px #111;
  	font-weight: 900;
  	line-height: 70px;
+}
 
- }
-
- .index-banner h1 {
+.index-banner h1 {
  	font-family: Cormorant Garamond;
  	color: #fff;
  	font-size: 20px;
@@ -256,39 +232,9 @@ nav ul li.parent ul.child li a {
  	font-style: italic;
  	line-height: 40px;
  	padding-top: 150px;
- }
+}
 
- .main-content {
- 	display: table-cell;
- 	vertical-align: middle;
-  padding: 45px;
- }
-
- .main-content h3 {
- 	text-transform: uppercase;
- 	font-weight: bold;
- 	font-family: 'Catamaran', sans-serif;
- 	color: #111;
- 	font-size: 52px;
- 	text-align: center;
- 	/*text-shadow: 2px 2px 8px #111;*/
- 	font-weight: 100;
- 	line-height: 70px;
-  padding-top: 115px;
- }
-
- .about-text p {
- 	font-family: Cormorant Garamond;
- 	color: #111;
- 	font-size: 20px;
- 	text-align: center;
- 	/*text-shadow: 2px 2px 8px #111;*/
- 	font-weight: 10;
- 	font-style: italic;
- 	line-height: 40px;
- 	padding-top: 75px;
- }
-
+/* SCALING FOR SMALL DEVICES */
 @media only screen and (min-width: 1000px) {
 	.wrapper {
 		width: 1000px;
@@ -307,223 +253,263 @@ nav ul li.parent ul.child li a {
   }
 }
 
-/* PROJECTS STYLING */
+/*Buttons on Home Page */
+.bottom-main {
+	width: 230px;
+  height: 100px;
+  margin: 0 auto;
+}
 
-  .heading {
-  	text-transform: uppercase;
-  	text-size: 3.5rem;
-  	letter-spacing: 3px;
-  	margin-right: -3px;
-  	margin-bottom: 5rem;
-  	text-align: center;
-  	color: #333;
-  	position: relative;
-  	margin-top: 100px;
-  	font-family: Catamaran;
-  	font-size: 20px;
-  }
+.bottom-main a {
+	display: block;
+	margin-top: 100px;
+	font-family: 'Catamaran', sans-serif;
+}
 
-  .heading::after {
-  	content: "";
-  	width: 12rem;
-  	height: .65rem;
-  	background-color: #333;
-  	position: absolute;
-  	bottom: -2rem;
-  	left: 50%;
-  	transform: translateX(-50%);
-  	border-radius: 2rem;
-  }
+.button-1 {
+	padding: 0.75em 2em;
+	height: auto;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #111;
+	border: 2px solid #111;
+	font-size: 28px;
+	display: inline-block;
+	border-radius: 0.3em;
+	transition: all 0.2s ease-in-out;
+	position: relative;
+	overflow: hidden;
+}
 
-  .card-wrapper {
-  	display: flex;
-  	align-items: center;
-  	align-content: center;
-  	flex-direction: column;
-  }
+#button-2 { /*Setting room at bottom of the page*/
+	margin-bottom: 100px;
+}
 
-  .card {
-  	width: 24rem;
-  	background-color: #ECCD4E;
-  	display: flex;
-  	flex-direction: column;
-  	align-items: center;
-  	justify-content: center;
-  	margin: 2rem 0;
-  	box-shadow: .5rem .5rem 3rem rgba(0,0,0,0.2);
-  	border-radius: 4%;
+.button-1:before {
+	content: "";
+	background-color: rgba(255, 255, 255, 0.5);
+	height: 100%;
+	width: 3em;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -4.5em;
+	transform: skewX(-45deg) translateX(0);
+	transition: none;
+}
 
-  }
+.button-1:hover {
+	background-color: #111;
+	color: #fff;
+	border-bottom: 4px solid #343434;
+}
 
-  .card .card-img {
-  	width: 100%;
-  	height: 26rem;
-  	object-fit: cover;
-  	-webkit-clip-path: polygon(0 0, 100% 0, 100% 38%, 0 61%);
+.button-1:hover:before {
+	transform: skewX(-45deg) translateX(13.5em);
+	transition: all 0.5s ease-in-out;
+}
+
+/*=================
+ABOUT PAGE STYLING
+=================*/
+.main-content {
+ 	display: table-cell;
+ 	vertical-align: middle;
+  padding: 45px;
+}
+
+.main-content h3 {
+ 	text-transform: uppercase;
+ 	font-weight: bold;
+ 	font-family: 'Catamaran', sans-serif;
+ 	color: #111;
+ 	font-size: 52px;
+ 	text-align: center;
+ 	font-weight: 100;
+ 	line-height: 70px;
+  padding-top: 115px;
+}
+
+.about-text p {
+ 	font-family: Cormorant Garamond;
+ 	color: #111;
+ 	font-size: 20px;
+ 	text-align: center;
+ 	font-weight: 10;
+ 	font-style: italic;
+ 	line-height: 40px;
+ 	padding-top: 75px;
+}
+
+/*===================
+PROJECTS PAGE STYLING
+===================*/
+.heading {
+  text-transform: uppercase;
+  text-size: 3.5rem;
+  letter-spacing: 3px;
+  margin-right: -3px;
+  margin-bottom: 5rem;
+  text-align: center;
+  color: #333;
+  position: relative;
+	margin-top: 100px;
+  font-family: Catamaran;
+  font-size: 20px;
+}
+
+.heading::after {
+  content: "";
+  width: 12rem;
+  height: .65rem;
+  background-color: #333;
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+	transform: translateX(-50%);
+  border-radius: 2rem;
+}
+
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.card {
+  width: 24rem;
+  background-color: #ECCD4E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  box-shadow: .5rem .5rem 3rem rgba(0,0,0,0.2);
+  border-radius: 4%;
+}
+
+.card .card-img {
+  width: 100%;
+  height: 26rem;
+  object-fit: cover;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 38%, 0 61%);
   clip-path: polygon(0 0, 100% 0, 100% 38%, 0 61%);
-  	border-radius: 4%;
-  }
-
-  .project-img {
-  	width: 12rem;
-  	height: 12rem;
-  	object-fit: cover;
-  	border-radius: 110%;
-  	margin-top: -21rem;
-  	z-index: 999;
-  	border: 8px solid #ECCD4E;
-  }
-
-	.general-ideas-name {
-  	margin-top: 20px;
-  	margin-bottom: 20px;
-  	color: #fff !important;
-  }
-
-  .card h1 {
-  	font-size: 24px;
-  	font-family: Catamaran;
-  	color: #333;
-  	font-weight: bold;
-  }
-
-  .date-complete {
-  	color: #777;
-  	font-size: 18px;
-  	font-weight: 400;
-  	font-style: italic;
-  }
-
-  .about {
-  	font-size: 17px;
-  	margin: 10px 30px;
-  	font-style: Catamaran;
-  	text-align: center;
-  	color: #333;
-  }
-
-  .card .btn {
-  	padding: 1rem 2.5rem;
-  	background-color: #333;
-  	border-radius: 2rem;
-  	margin: 10 0;
-  	text-transform: uppercase;
-  	color: #eee;
-  	font-size: 1rem;
-  	transition: all .5s;
-  }
-
-  .card .btn:hover{
-  	transform: translateY(-2px);
-  	box-shadow: .5rem .5rem 2rem rgba(0,0,0.2)
-  }
-
-  card .btn:active{
-  	transform: translateY(-2px);
-  	box-shadow: none;
-  }
-
-  @media screen and (min-width: 350px) {
-  	.card-wrapper {
-  		flex-direction: row;
-  		flex-wrap: wrap;
-  		justify-content: center;
-  		align-items: center;
-  	}
-  	.card {
-  		margin: 1.2rem;
-  	}
-
-  	@keyframes fadeIn {
-  		from {
-  			opacity: 0;
-  		}
-  		to {
-  			opacity: 1;
-  		}
-  	}
-  	.card:nth-child(1) {
-  		animation: fadeIn .5s .5s backwards;
-  	}
-
-  	.card:nth-child(2) {
-  		animation: fadeIn .5s 1s backwards;
-  	}
-
-  	.card:nth-child(3) {
-  		animation: fadeIn .5s 1.5s backwards;
-  	}
-
-  	.card:nth-child(4) {
-  		animation: fadeIn .5s 2s backwards;
-  	}
-
-  	.card:nth-child(5) {
-  		animation: fadeIn .5s 2.5s backwards;
-  	}
-
-  	.card:nth-child(6) {
-  		animation: fadeIn .5s 3s backwards;
-  	}
-
-  	.card:hover {
-  		transform: scale(1.1);
-  	}
-
-  }
-
-	@keyframes sheen {
-	 0% {
-		 transform: skewY(-45deg) translateX(0);
-	}
-	 100% {
-		 transform: skewY(-45deg) translateX(12.5em);
-	}
+  border-radius: 4%;
 }
 
-	.bottom-main {
-		width: 180px;
-  	height: 100px;
-  	margin: 0 auto;
-	}
+.project-img {
+  width: 12rem;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 110%;
+  margin-top: -21rem;
+  z-index: 999;
+  border: 8px solid #ECCD4E;
+}
 
-	.bottom-main a {
-		display: block;
-		margin-top: 100px;
-		font-family: 'Catamaran', sans-serif;
-	}
+.general-ideas-name {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff !important;
+}
 
- .button-1 {
-	 padding: 0.75em 2em;
-	 text-align: center;
-	 text-decoration: none;
-	 color: #111;
-	 border: 2px solid #111;
-	 font-size: 24px;
-	 display: inline-block;
-	 border-radius: 0.3em;
-	 transition: all 0.2s ease-in-out;
-	 position: relative;
-	 overflow: hidden;
+.card h1 {
+  font-size: 24px;
+  font-family: Catamaran;
+  color: #333;
+  font-weight: bold;
 }
- .button-1:before {
-	 content: "";
-	 background-color: rgba(255, 255, 255, 0.5);
-	 height: 100%;
-	 width: 3em;
-	 display: block;
-	 position: absolute;
-	 top: 0;
-	 left: -4.5em;
-	 transform: skewX(-45deg) translateX(0);
-	 transition: none;
+
+.date-complete {
+  color: #777;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
 }
- .button-1:hover {
-	 background-color: #111;
-	 color: #fff;
-	 border-bottom: 4px solid #343434;
+
+.about {
+  font-size: 17px;
+  margin: 10px 30px;
+  font-style: Catamaran;
+  text-align: center;
+  color: #333;
 }
- .button-1:hover:before {
-	 transform: skewX(-45deg) translateX(13.5em);
-	 transition: all 0.5s ease-in-out;
+
+.card .btn {
+  padding: 1rem 2.5rem;
+  background-color: #333;
+  border-radius: 2rem;
+  margin: 10 0;
+  text-transform: uppercase;
+  color: #eee;
+  font-size: 1rem;
+  transition: all .5s;
+}
+
+.card .btn:hover{
+  transform: translateY(-2px);
+  box-shadow: .5rem .5rem 2rem rgba(0,0,0.2)
+}
+
+card .btn:active{
+  transform: translateY(-2px);
+  box-shadow: none;
+}
+
+/* SCALING FOR SMALL DEVICES */
+@media screen and (min-width: 350px) {
+  .card-wrapper {
+  	flex-direction: row;
+  	flex-wrap: wrap;
+  	justify-content: center;
+  	align-items: center;
+  }
+  .card {
+  	margin: 1.2rem;
+  }
+
+  @keyframes fadeIn {
+  	from {
+  		opacity: 0;
+  	} to {
+  		opacity: 1;
+  	}
+  }
+  .card:nth-child(1) {
+  	animation: fadeIn .5s .5s backwards;
+  }
+
+  .card:nth-child(2) {
+  	animation: fadeIn .5s 1s backwards;
+  }
+
+  .card:nth-child(3) {
+  	animation: fadeIn .5s 1.5s backwards;
+  }
+
+  .card:nth-child(4) {
+  	animation: fadeIn .5s 2s backwards;
+  }
+
+  .card:nth-child(5) {
+  	animation: fadeIn .5s 2.5s backwards;
+  }
+
+  .card:nth-child(6) {
+  	animation: fadeIn .5s 3s backwards;
+  }
+
+  .card:hover {
+  	transform: scale(1.1);
+  }
+}
+
+@keyframes sheen {
+	0% {
+		transform: skewY(-45deg) translateX(0);
+	} 100% {
+		transform: skewY(-45deg) translateX(12.5em);
+	}
 }
