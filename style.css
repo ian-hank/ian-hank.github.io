@@ -282,10 +282,6 @@ Home Page / Main banner
 	overflow: hidden;
 }
 
-#button-2 { /*Setting room at bottom of the page*/
-	margin-bottom: 100px;
-}
-
 .button-1:before {
 	content: "";
 	background-color: rgba(255, 255, 255, 0.5);
@@ -417,9 +413,14 @@ PROJECTS PAGE STYLING
 
 .card h1 {
   font-size: 24px;
-  font-family: Catamaran;
+	font-family: 'Catamaran';
   color: #333;
   font-weight: bold;
+}
+
+.card h1 p {
+  font-family: 'Catamaran';
+	font-weight: bold;
 }
 
 .date-complete {
