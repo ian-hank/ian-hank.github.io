@@ -212,7 +212,6 @@ Home Page / Main banner
 
 .index-banner h2 {
  	text-transform: uppercase;
- 	font-weight: bold;
  	font-family: 'Catamaran', sans-serif;
  	color: #fff;
  	font-size: 52px;
@@ -231,7 +230,7 @@ Home Page / Main banner
  	font-weight: 100;
  	font-style: italic;
  	line-height: 40px;
- 	padding-top: 150px;
+ 	padding-top: 90px;
 }
 
 /* SCALING FOR SMALL DEVICES */
@@ -258,6 +257,7 @@ Home Page / Main banner
 	width: 230px;
   height: 100px;
   margin: 0 auto;
+	align-content: center;
 }
 
 .bottom-main a {
@@ -280,9 +280,6 @@ Home Page / Main banner
 	transition: all 0.2s ease-in-out;
 	position: relative;
 	overflow: hidden;
-}
-
-#button-2 { /*Setting room at bottom of the page*/
 	margin-bottom: 100px;
 }
 
@@ -321,7 +318,6 @@ ABOUT PAGE STYLING
 
 .main-content h3 {
  	text-transform: uppercase;
- 	font-weight: bold;
  	font-family: 'Catamaran', sans-serif;
  	color: #111;
  	font-size: 52px;
@@ -329,6 +325,13 @@ ABOUT PAGE STYLING
  	font-weight: 100;
  	line-height: 70px;
   padding-top: 115px;
+}
+
+#important-text {
+	font-weight: bold;
+	text-transform: capitalize;
+	margin-bottom: -45px;
+	font-size: 20px;
 }
 
 .about-text p {
@@ -417,9 +420,14 @@ PROJECTS PAGE STYLING
 
 .card h1 {
   font-size: 24px;
-  font-family: Catamaran;
+	font-family: 'Catamaran';
   color: #333;
   font-weight: bold;
+}
+
+.card h1 p {
+  font-family: 'Catamaran';
+	font-weight: bold;
 }
 
 .date-complete {
@@ -429,12 +437,13 @@ PROJECTS PAGE STYLING
   font-style: italic;
 }
 
-.about {
-  font-size: 17px;
+#project-text {
+  font-size: 18px;
   margin: 10px 30px;
-  font-style: Catamaran;
+  font-family: Cormorant Garamond;
   text-align: center;
   color: #333;
+	font-weight: 600;
 }
 
 .card .btn {
