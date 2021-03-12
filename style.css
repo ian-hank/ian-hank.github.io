@@ -252,14 +252,17 @@ Home Page / Main banner
   	}
 }
 
-/*Buttons on Home Page */
+/*======================
+Home Page / Button Links
+======================*/
 .bottom-buttons {
 	width: 100%;
 	display: table;
 }
 
 .bottom-main {
-	width: auto;
+
+	width: 100%;
 	height: auto;
 	display: table;
 	align-content: center;
@@ -277,12 +280,21 @@ Home Page / Main banner
 }
 
 .bottom-main ul li a {
+	align-items: center;
 	display: block;
 	margin: 50px 50px 50px 50px;
 	font-family: 'Catamaran', sans-serif;
 }
 
+/*Displaying buttons inline for media*/
+@media only screen and (max-width: 1000px) {
+	.bottom-main ul li {
+		display: block;
+	}
+}
+
 .button-1 {
+	background-color: #fff;
 	display: inline-table;
 	padding: 0.75em 2em;
 	height: auto;
@@ -477,7 +489,7 @@ PROJECTS PAGE STYLING
   	box-shadow: .5rem .5rem 2rem rgba(0,0,0.2)
 }
 
-card .btn:active{
+.card .btn:active{
   	transform: translateY(-2px);
   	box-shadow: none;
 }
