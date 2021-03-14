@@ -256,17 +256,18 @@ Home Page / Main banner
 Home Page / Button Links
 ======================*/
 .bottom-buttons {
+	position: relative;
 	width: 100%;
-	display: table;
 }
 
 .bottom-main {
-
-	width: 100%;
-	height: auto;
-	display: table;
-	align-content: center;
-
+	position: relative;
+	width: 581vh;
+	height: calc(100vh - 581px);
+	background-color: #f3f3f3;
+	display: table-cell;
+	align-items: center;
+	vertical-align: middle;
 }
 
 .bottom-main ul {
@@ -277,12 +278,14 @@ Home Page / Button Links
 
 .bottom-main ul li {
 	display: inline-block;
+	height: auto;
 }
 
 .bottom-main ul li a {
+	height: auto;
 	align-items: center;
 	display: block;
-	margin: 50px 50px 50px 50px;
+	margin: 0px 50px 0px 50px;
 	font-family: 'Catamaran', sans-serif;
 }
 
@@ -291,10 +294,14 @@ Home Page / Button Links
 	.bottom-main ul li {
 		display: block;
 	}
+
+	.bottom-main ul li a {
+		margin: 50px 50px 50px 50px;
+	}
 }
 
 .button-1 {
-	background-color: #fff;
+	background-color: #F5F5F5;
 	display: inline-table;
 	padding: 0.75em 2em;
 	height: auto;
@@ -304,8 +311,9 @@ Home Page / Button Links
 	color: #111;
 	border: 2px solid #111;
 	font-size: 28px;
-	border-radius: 0.3em;
-	transition: all 0.2s ease-in-out;
+	font-weight: bolder;
+	border-radius: 0.6em;
+	transition: all 0.3s ease-in-out;
 	position: relative;
 	overflow: hidden;
 }
