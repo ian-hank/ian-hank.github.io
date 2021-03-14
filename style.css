@@ -114,7 +114,6 @@ header nav ul {
 
 header nav ul li{
  	display: inline-block;
- 	float: left;
  	list-style: none;
  	padding: 0 10px;
 }
@@ -145,7 +144,7 @@ header nav ul li a{
 
   	header nav ul li {
  		display: inline-block;
- 		float: left;
+ 		
  		list-style: none;
  		padding: 0 10px;
   	}
