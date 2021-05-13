@@ -144,7 +144,7 @@ header nav ul li a{
 
   	header nav ul li {
  		display: inline-block;
- 		
+
  		list-style: none;
  		padding: 0 10px;
   	}
@@ -289,7 +289,7 @@ Home Page / Button Links
 }
 
 /*Displaying buttons inline for media*/
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1300px) {
 	.bottom-main ul li {
 		display: block;
 	}
