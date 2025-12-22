@@ -29,14 +29,27 @@ type Hobby = {
 
 const skills: Skill = [
   { name: "C#", years: 8 },
+
 ]
 
 const timeline: Timeline = [
   {
-    year: "2025",
-    title: "Contracting Role",
+    year: "February, 2024",
+    title: ".NET Developer",
     company: "JMA Resources",
-    descriptions: [ "" ],
+    descriptions: [ 
+      "Please reach out if you would like more info on the role.",
+    ],
+  },
+  {
+    year: "January, 2023",
+    title: "Junior Software Engineer",
+    company: "JMA Resources",
+    descriptions: [
+      "Developed and maintained a full-stack application using an F# Giraffe backend and a React Native mobile frontend.", 
+      "Helped with the design and implementation of key backend API endpoints and service layers, using a data-first architecture to drive consistent and scalable interactions between frontend and backend.", 
+      "Integrated Stripe APIs to enable in-app purchases and manage subscription-based order flows within the mobile app.", 
+    ]
   },
 ]
 
@@ -98,6 +111,7 @@ export default function Portfolio() {
       "2": "skills",
       "3": "about",
       "4": "hobbies",
+      "5": "projects",
     }
 
     if (sectionMap[trimmedCmd]) {
@@ -107,13 +121,13 @@ export default function Portfolio() {
     }
   }
 
-  type navItem = {
+  type NavagationItem = {
     id: Section,
     label: string,
     key: string,
   }
 
-  const navItems: { id: Section; label: string; key: string }[] = [
+  const navItems: NavagationItem = [
     { id: "home",       label: isVimMode() ? "home.md"      : "Home",        key: "1" },
     { id: "skills",     label: isVimMode() ? "skills.ts"    : "Skills",      key: "2" },
     { id: "about",      label: isVimMode() ? "about.json"   : "About",       key: "3" },
@@ -132,7 +146,7 @@ export default function Portfolio() {
                 <span className="text-xs text-sidebar-foreground">~/portfolio/ian-hank</span>
               </>
             )}
-            {mode === "simple" && <span className="text-sm font-semibold text-sidebar-foreground">Portfolio</span>}
+            {mode === "simple" && <span className="text-sm font-semibold text-sidebar-foreground">Ian Hank</span>}
           </div>
           <div className="flex items-center gap-1">
             <button
@@ -290,7 +304,7 @@ export default function Portfolio() {
                           </div>
                           <p className="text-muted-foreground">
                             <span className="text-primary">{">"}</span>
-                            {" "}{HomeText.Block1} 
+                            {" "}{HomeText.Block1}
                           </p>
                           <p className="text-muted-foreground">
                             <span className="text-primary">{">"}</span>
@@ -324,8 +338,7 @@ export default function Portfolio() {
                       <>
                         <h1 className="text-3xl font-bold text-foreground">Welcome</h1>
                         <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
-                          <p>{HomeText.Block1}</p>
-                          <p>{HomeText.Block2}</p>
+                          <p>{"Hello! "}{HomeText.Block2}</p>
                           <p>{HomeText.Block3}</p>
                           <p>{HomeText.Block4}</p>
                           <div className="flex flex-wrap gap-2 pt-2">
@@ -417,28 +430,30 @@ export default function Portfolio() {
                           <span className="text-primary">{"["}</span>
                         </div>
                         <div className="space-y-4 pl-6">
-                          {timeline.map((item, index) => (
+                          {timeline.map((timeline, parentIndex) => (
                             <div
-                              key={index}
+                              key={parentIndex}
                               className="relative pl-6 pb-4 border-l-2 border-primary/30 last:border-l-0"
                             >
                               <div className="absolute left-[-5px] top-0 h-2 w-2 rounded-full bg-primary" />
                               <div className="space-y-1 text-xs">
                                 <div className="flex items-center gap-2 flex-wrap">
-                                  <span className="text-muted-foreground">{index + 2}</span>
+                                  <span className="text-muted-foreground">{parentIndex + 2}</span>
                                   <Badge
                                     variant="outline"
                                     className="text-primary border-primary text-[10px] font-mono"
                                   >
-                                    {item.year}
+                                    {timeline.year}
                                   </Badge>
-                                  <span className="text-accent-foreground font-semibold">{item.title}</span>
+                                  <span className="text-accent-foreground font-semibold">{timeline.title}</span>
                                 </div>
                                 <div className="flex items-center gap-2 pl-8">
                                   <span className="text-primary">@</span>
-                                  <span className="text-foreground/80">{item.company}</span>
+                                  <span className="text-foreground/80">{timeline.company}</span>
                                 </div>
-                                <p className="text-muted-foreground pl-8 text-xs leading-relaxed">{item.description}</p>
+                                {timeline.descriptions.map((description, childIndex) => (  
+                                  <p key={childIndex} className="text-muted-foreground pl-8 text-xs leading-relaxed">{description}</p>
+                                ))}
                               </div>
                             </div>
                           ))}
