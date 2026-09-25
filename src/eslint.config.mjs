@@ -1,10 +1,13 @@
 import { defineConfig, globalIgnores } from "eslint/config"
-import nextVitals from "eslint-config-next/core-web-vitals"
-import nextTs from "eslint-config-next/typescript"
+import { FlatCompat } from "@eslint/eslintrc"
+import { fileURLToPath } from "node:url"
+
+const compat = new FlatCompat({
+  baseDirectory: fileURLToPath(new URL(".", import.meta.url)),
+})
 
 const eslintConfig = defineConfig([
-  ...nextVitals,
-  ...nextTs,
+  ...compat.extends("next/core-web-vitals", "next/typescript"),
   globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts"]),
 ])
 
