@@ -1,4 +1,4 @@
-export type SectionId = "home" | "skills" | "about" | "hobbies" | "projects"
+export type SectionId = "home" | "skills" | "about" | "education" | "hobbies" | "projects"
 
 export type NavItem = {
   id: SectionId
@@ -31,6 +31,17 @@ export type Hobby = {
   descriptions: string[]
 }
 
+export type Education = {
+  degree: string
+  institution: string
+  graduationYear: number
+}
+
+export type Certification = {
+  name: string
+  issuer?: string
+}
+
 export type Project = {
   name: string
   status: string
@@ -59,15 +70,16 @@ export const navItems: NavItem[] = [
   { id: "home", key: "1", labels: { desktop: "home.md", mobile: "Home" } },
   { id: "skills", key: "2", labels: { desktop: "skills.ts", mobile: "Skills" } },
   { id: "about", key: "3", labels: { desktop: "experience.json", mobile: "Experience" } },
-  { id: "hobbies", key: "4", labels: { desktop: "hobbies.yml", mobile: "Hobbies" } },
-  { id: "projects", key: "5", labels: { desktop: "projects.yml", mobile: "Projects" } },
+  { id: "education", key: "4", labels: { desktop: "education.yml", mobile: "Education & Certifications" } },
+  { id: "hobbies", key: "5", labels: { desktop: "hobbies.yml", mobile: "Hobbies" } },
+  { id: "projects", key: "6", labels: { desktop: "projects.yml", mobile: "Projects" } },
 ]
 
 export const homeCopy = {
   heading: "Hello!",
   intro: {
     desktop:
-      'Welcome to my Vim-inspired portfolio. Navigate using the explorer on the left, or enter command (:) mode to jump between sections using numbers (1-5) or file names like "home", "skills", "experience", "hobbies", and "projects". Type ":help" for the full command list.',
+      'Welcome to my Vim-inspired portfolio. Navigate using the explorer on the left, or enter command (:) mode to jump between sections using numbers (1-6) or file names like "home", "skills", "experience", "education", "hobbies", and "projects". Type ":help" for the full command list.',
     mobile:
       "Welcome to my portfolio. This experience was designed primarily for desktop to showcase its full functionality. On mobile, you can use the menu above to navigate and explore my work, interests, and background.",
   },
@@ -83,12 +95,14 @@ export const homeCopy = {
 }
 
 export const commandCopy = {
-  placeholder: ":1-5 to navigate, :home, :skills, :experience, :hobbies, :projects",
-  help: "Press : for command mode, :help for commands, or 1-5 to navigate",
+  placeholder: ":1-6 to navigate, :home, :skills, :experience, :education, :hobbies, :projects",
+  help: "Press : for command mode, :help for commands, or 1-6 to navigate",
   commands: [
     { command: ":home", description: "Open home.md" },
     { command: ":skills", description: "Open skills.ts" },
     { command: ":experience", description: "Open experience.json" },
+    { command: ":education", description: "Open education.yml" },
+    { command: ":certifications", description: "Open education.yml" },
     { command: ":hobbies", description: "Open hobbies.yml" },
     { command: ":projects", description: "Open projects.yml" },
     { command: ":resume", description: "Open resume.pdf" },
@@ -100,18 +114,29 @@ export const commandCopy = {
   ],
 }
 
+export const education: Education = {
+  degree: "Bachelor of Science in Management Information Systems",
+  institution: "West Virginia University",
+  graduationYear: 2022,
+}
+
+export const certifications: Certification[] = [
+  { name: "CompTIA Security+", issuer: "CompTIA" },
+  { name: "CJIS Certification" },
+]
+
 export const skillCategories: SkillCategory[] = [
   {
     name: "Languages",
     skills: [
       { name: "C#", years: 8 },
-      { name: "C++", years: 6 },
-      { name: "C", years: 7 },
-      { name: "F#", years: 3 },
-      { name: "TypeScript", years: 5 },
       { name: "JavaScript", years: 8 },
       { name: "SQL", years: 8 },
+      { name: "C", years: 7 },
+      { name: "C++", years: 6 },
+      { name: "TypeScript", years: 5 },
       { name: "Python", years: 4 },
+      { name: "F#", years: 3 },
     ],
   },
   {
@@ -136,16 +161,16 @@ export const skillCategories: SkillCategory[] = [
   {
     name: "Databases",
     skills: [
-      { name: "PostgreSQL", years: 6 },
       { name: "SQL Server", years: 8 },
+      { name: "PostgreSQL", years: 6 },
       { name: "SQLite", years: 2 },
     ],
   },
   {
     name: "Cloud & Platform",
     skills: [
-      { name: "AWS", years: 4 },
       { name: "Docker", years: 6 },
+      { name: "AWS", years: 4 },
       { name: "Kubernetes", years: 4 },
       { name: "Amazon EKS", years: 4 },
       { name: "Kustomize", years: 4 },
@@ -155,18 +180,18 @@ export const skillCategories: SkillCategory[] = [
   {
     name: "DevOps & Automation",
     skills: [
+      { name: "GitOps", years: 6 },
       { name: "GitLab CI/CD", years: 2 },
       { name: "Argo CD", years: 2 },
-      { name: "GitOps", years: 6 },
       { name: "Ansible", years: 2 },
     ],
   },
   {
     name: "Testing & Quality",
     skills: [
-      { name: "Playwright", years: 1 },
       { name: "xUnit", years: 8 },
       { name: "ESLint", years: 6 },
+      { name: "Playwright", years: 1 },
     ],
   },
   {
@@ -174,8 +199,8 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "Git", years: 8 },
       { name: "Linux", years: 8 },
-      { name: "Neovim", years: 4 },
       { name: "VS Code", years: 8 },
+      { name: "Neovim", years: 4 },
       { name: "WSL", years: 4 },
     ],
   },
@@ -183,7 +208,7 @@ export const skillCategories: SkillCategory[] = [
 
 export const timeline: TimelineItem[] = [
   {
-    year: "February, 2024",
+    year: "February, 2024 - Current",
     title: "Software Engineer (.NET)",
     company: "JMA Resources | Mechanicsburg, PA",
     descriptions: [
@@ -215,7 +240,7 @@ export const timeline: TimelineItem[] = [
     ],
   },
   {
-    year: "March, 2022",
+    year: "March, 2022 - July, 2022",
     title: "Help Desk Support Specialist",
     company: "JMA Resources",
     descriptions: [
