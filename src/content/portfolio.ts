@@ -55,7 +55,7 @@ export type Project = {
 
 export const profile = {
   name: "Ian Hank",
-  title: "Software Engineer",
+  title: "Full-Stack Software Engineer",
   path: "~/portfolio/ian-hank",
   avatar: "/avatar.jpg",
   links: {
@@ -79,24 +79,24 @@ export const homeCopy = {
   heading: "Hello!",
   intro: {
     desktop:
-      'Welcome to my Vim-inspired portfolio. Navigate using the explorer on the left, or enter command (:) mode to jump between sections using numbers (1-6) or file names like "home", "skills", "experience", "education", "hobbies", and "projects". Type ":help" for the full command list.',
+      "Welcome to my Vim-inspired portfolio. Use the explorer to browse sections, or press : to enter command mode. Type :help for available commands.",
     mobile:
-      "Welcome to my portfolio. This experience was designed primarily for desktop to showcase its full functionality. On mobile, you can use the menu above to navigate and explore my work, interests, and background.",
+      "Welcome to my portfolio. Use the menu above to explore my experience, skills, projects, and interests.",
   },
   paragraphs: [
-    "I am a full-stack engineer currently working in a cleared contracting role. Most of my professional work has been in the .NET ecosystem. On the backend I build services in C# and F#, and on the frontend I have worked with everything from vanilla JS, jQuery, and AJAX to modern stacks like TypeScript, React, and React Native. I also have experience designing and modernizing cloud infrastructure, particularly with containerized AWS environments, infrastructure as code, and automated CI/CD.",
-    "I care a lot about how things work under the hood and enjoy digging into lower-level systems. Language design and compiler engineering are areas I am especially passionate about, and I am looking for opportunities that let me grow and apply those skills. Most of my lower-level work is done in C++17 and C.",
-    "I am currently open to new projects and collaborations. If you would like to work together, feel free to reach out.",
+    "I’m a full-stack software engineer working across application development, cloud infrastructure, and platform engineering. Most of my professional work has been in the .NET ecosystem, building backend services in C# and F#. My frontend experience ranges from JavaScript, jQuery, and AJAX to TypeScript, React, and React Native. I also work heavily with cloud infrastructure, particularly containerized AWS environments, Kubernetes, infrastructure as code, GitOps, and automated CI/CD.",
+    "I care a lot about how things work under the hood and enjoy digging into lower-level systems when I get the chance. Language design and compiler engineering are areas I’m especially interested in, and most of that work is in C++ and C. I’m always looking for opportunities to keep building those skills and apply them to real problems.",
+    "I’m currently open to new software engineering opportunities, technical collaborations, and select development projects. If you’d like to work together or just talk about something interesting, feel free to reach out.",
   ],
   badges: {
-    desktop: [":available", ":open_to_collab"],
-    mobile: ["Available for work", "Open to collaboration"],
+    desktop: [":open_to_work", ":open_to_collab"],
+    mobile: ["Open to work", "Open to collaboration"],
   },
 }
 
 export const commandCopy = {
-  placeholder: ":1-6 to navigate, :home, :skills, :experience, :education, :hobbies, :projects",
-  help: "Press : for command mode, :help for commands, or 1-6 to navigate",
+  placeholder: ":help for commands",
+  help: "Press : for command mode · 1–6 to navigate · :help for commands",
   commands: [
     { command: ":home", description: "Open home.md" },
     { command: ":skills", description: "Open skills.ts" },
@@ -115,7 +115,7 @@ export const commandCopy = {
 }
 
 export const education: Education = {
-  degree: "Bachelor of Science in Management Information Systems",
+  degree: "B.S. in Management Information Systems",
   institution: "West Virginia University",
   graduationYear: 2022,
 }
@@ -174,7 +174,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Kubernetes", years: 4 },
       { name: "Amazon EKS", years: 4 },
       { name: "Kustomize", years: 4 },
-      { name: "Infrastructure as Code", years: 2 },
+      { name: "IaC / AWS CDK", years: 2 },
     ],
   },
   {
@@ -208,18 +208,18 @@ export const skillCategories: SkillCategory[] = [
 
 export const timeline: TimelineItem[] = [
   {
-    year: "February, 2024 - Current",
+    year: "Feb 2024 – Present",
     title: "Software Engineer (.NET)",
     company: "JMA Resources | Mechanicsburg, PA",
     descriptions: [
       "Led the migration from manual deployments to an immutable, containerized AWS development environment using CDK, improving deployment consistency, repeatability, and recovery.",
       "Designed and implemented CI/CD pipelines with quality gates, container builds, and automated deployments across self-hosted Windows and Linux runners using Argo CD and EKS.",
-      "Rewrote critical data replication routines, reducing memory usage by 8000% and improving resilience for remote SQL execution and server log replication in intermittent-connectivity environments.",
+      "Rewrote critical data replication routines to use roughly 1/80th the memory of the previous implementation while improving resilience for remote SQL execution and server log replication in intermittent-connectivity environments.",
       "Developed a remote installer and patching solution for application and database upgrades, reducing the need for costly onsite maintenance visits and accelerating field updates.",
     ],
   },
   {
-    year: "January, 2023 - February, 2024",
+    year: "Jan 2023 – Feb 2024",
     title: "Junior Software Engineer",
     company: "JMA Resources | Mechanicsburg, PA",
     descriptions: [
@@ -230,23 +230,23 @@ export const timeline: TimelineItem[] = [
     ],
   },
   {
-    year: "July, 2022 - January, 2023",
+    year: "Jul 2022 – Jan 2023",
     title: "Systems Administrator",
     company: "JMA Resources | Mechanicsburg, PA",
     descriptions: [
       "Implemented and maintained security controls aligned with CMMC 2.0 and NIST SP 800-171, supporting organizational certification readiness.",
-      "Developed and executed an endpoint and vulnerability response process in a GCC High Azure environment, including remediation and cloud security hardening.",
+      "Developed and implemented an endpoint vulnerability-management process in a GCC High Azure environment, including remediation and cloud security hardening.",
       "Standardized and secured endpoint configurations using PowerShell and Intune to improve device consistency, manageability, and security posture.",
     ],
   },
   {
-    year: "March, 2022 - July, 2022",
+    year: "Mar 2022 – Jul 2022",
     title: "Help Desk Support Specialist",
     company: "JMA Resources",
     descriptions: [
       "Provided IT support in the GCC High Azure Cloud environment.",
-      "Created an assets database that helped organize and track company-managed assets.",
-      "Helped maintain and solve bugs on an internal contract delivery tool written by another developer no longer with the company.",
+      "Created an asset-tracking database for company-managed hardware and equipment.",
+      "Maintained and debugged a legacy internal contract-delivery application after assuming ownership of the codebase.",
     ],
   },
 ]
@@ -275,15 +275,9 @@ export const hobbies: Hobby[] = [
     ],
   },
   {
-    name: "Chess",
-    descriptions: [
-      "Rapid",
-      "Opening study",
-    ],
-  },
-  {
     name: "Gaming",
     descriptions: [
+      "Chess",
       "Counter-Strike",
       "Factorio",
       "Timberborn",
@@ -314,7 +308,7 @@ export const projects: Project[] = [
     name: "Lindsay",
     status: "In progress",
     description:
-      "A statically typed, immutable-first programming language and compiler focused on efficient systems software and low-power environments.",
+      "A statically typed, immutable-first programming language and compiler designed for efficient systems software and resource-constrained environments.",
     technologies: [
       "C++",
       "CMake",
@@ -332,7 +326,7 @@ export const projects: Project[] = [
     name: "StandupScript",
     status: "In progress",
     description:
-      "A compiler-style DSL for writing structured standup reports, with a handwritten lexer, parser, AST, and semantic model designed to produce Markdown and other structured output.",
+      "A domain-specific language for structured standup reports, implemented with a handwritten lexer, parser, AST, and semantic model that produces Markdown and other structured output.",
     technologies: [
       "C++",
       "CMake",
