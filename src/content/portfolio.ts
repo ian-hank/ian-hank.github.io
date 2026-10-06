@@ -79,13 +79,13 @@ export const homeCopy = {
   heading: "Hello!",
   intro: {
     desktop:
-      "Welcome to my Vim-inspired portfolio. Use the explorer to browse sections, or press : to enter command mode. Type :help for available commands.",
+      "Welcome to my Vim-inspired portfolio. Use the explorer to browse sections or press : to enter command mode. Type :help for available commands.",
     mobile:
       "Welcome to my portfolio. Use the menu above to explore my experience, skills, projects, and interests.",
   },
   paragraphs: [
-    "I’m a full-stack software engineer working across application development, cloud infrastructure, and platform engineering. Most of my professional work has been in the .NET ecosystem, building backend services in C# and F#. My frontend experience ranges from JavaScript, jQuery, and AJAX to TypeScript, React, and React Native. I also work heavily with cloud infrastructure, particularly containerized AWS environments, Kubernetes, infrastructure as code, GitOps, and automated CI/CD.",
-    "I care a lot about how things work under the hood and enjoy digging into lower-level systems when I get the chance. Language design and compiler engineering are areas I’m especially interested in, and most of that work is in C++ and C. I’m always looking for opportunities to keep building those skills and apply them to real problems.",
+    "I’m a full-stack software engineer working across application development, cloud infrastructure, and platform engineering. Most of my professional work has been in the .NET ecosystem, building backend services in C# and F#. My frontend experience ranges from JavaScript, jQuery, and AJAX to TypeScript, React, and React Native. I also work heavily with cloud infrastructure, especially containerized AWS environments, Kubernetes, infrastructure as code, GitOps, and automated CI/CD.",
+    "I care a lot about how things work under the hood and enjoy digging into lower-level systems. Language design and compiler engineering are areas I have spent a lot of time on, and most of that work is in C++ and C. I’m always looking for opportunities to keep building those skills and apply them to real problems.",
     "I’m currently open to new software engineering opportunities, technical collaborations, and select development projects. If you’d like to work together or just talk about something interesting, feel free to reach out.",
   ],
   badges: {
